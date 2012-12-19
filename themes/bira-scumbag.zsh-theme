@@ -59,6 +59,7 @@ local user_host='%{$terminfo[bold]$fg[green]%}%n@%m%{$reset_color%}'
 local current_dir='%{$terminfo[bold]$fg[blue]%} %~%{$reset_color%}'
 local git_branch='$(my_git_prompt)%{$reset_color%}'
 
+VIRTUAL_ENV_DISABLE_PROMPT=true
 local venv='$(my_venv)'
 
 PROMPT="╭─${date_time} $(ssh_connection) ${user_host}  ${current_dir}   ${git_branch}
@@ -73,3 +74,4 @@ ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg_bold[red]%}●"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[white]%}●"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[red]%}✕"
 ZSH_THEME_GIT_PROMPT_SUFFIX=" $fg_bold[white]›%{$reset_color%}"
+
